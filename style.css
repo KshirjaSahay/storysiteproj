@@ -181,24 +181,6 @@ header{
 .design-item:hover img{
     transform: scale(1.2);
 }
-.design-img span:first-of-type{
-    position: absolute;
-    z-index: 1;
-    top: 10px;
-    left: 10px;
-    background: var(--exDark);
-    color: #fff;
-    padding: 0.25rem 1rem;
-}
-.design-img span:last-of-type{
-    position: absolute;
-    z-index: 1;
-    bottom: 10px;
-    right: 10px;
-    color: #fff;
-    font-weight: 700;
-    font-size: 1.1rem;
-}
 .design-title{
     padding: 1rem;
     font-size: 1.2rem;
@@ -232,6 +214,7 @@ header{
     color: #fff;
     font-size: 1.4rem;
     padding: 0.3rem 0.6rem;
+    cursor: pointer;
 }
 .story-text{
     margin: 2.2rem 0;

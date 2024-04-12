@@ -6,33 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Submitted Story</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* CSS styles */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 50px auto;
-      padding: 0 20px;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .submitted-data {
-      margin-bottom: 20px;
-    }
-
-    .submitted-data label {
-      font-weight: bold;
-    }
-  </style>
 </head>
 
 <body>
@@ -75,7 +48,14 @@
   </section>
 
   <script>
-    // Function to get URL parameters
+    function goToNextChapter() {
+      window.location.href = "end.html";
+    }
+
+    function goToPreviousChapter() {
+      window.location.href = "index.html";
+    }
+
     function getUrlParams() {
       var params = {};
       var queryString = window.location.search;
