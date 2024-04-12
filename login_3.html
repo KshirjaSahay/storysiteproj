@@ -37,7 +37,13 @@
                 alert('User ID and Password are required');
                 return false;
             }
-            return true;
+            else if (userID === 'kshirjasahay' || password === 'Abc@1234'){
+                return true;
+            }
+            else {
+                alert('Invalid User ID or Password');
+                return false;
+            }
         }
 
         function goToHome() {

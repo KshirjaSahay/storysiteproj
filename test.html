@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submitted Story</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .submitted-data {
+      margin-bottom: 20px;
+    }
+
+    .submitted-data label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">TaleSpinner</a>
+        <div class="navbar-nav">
+          <a href="">home</a>
+          <a href="#story">stories</a>
+          <a href="#about">about</a>
+          <a href="post.html">Write-Your-Story</a>
+        </div>
+      </div>
+    </nav>
+    <div class="banner">
+      <div class="container">
+        <h1 class="banner-title" id="banner-title"></h1>
+        <hr>
+        <div id="summary"><p>Spin your story, share your world, let it take flight</p></div>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="content">
+      <div class="content-text">
+        <pre id="content-text">
+        </pre>
+        <hr>
+        <div style="text-align:right ;" id="author">
+          Ayush Kumar Choudhary
+        </div>
+      </div>
+      <div class="snav">
+        <button class="snav-button" onclick="goToPreviousChapter()"><img src="images/prevarrow.png" style="height: 20px; width:20px;"><p>Prev</p></button>
+        <button class="snav-button" onclick="goToNextChapter()">Next<img src="images/nextarrow.png" style="height: 20px; width:20px;"></button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Function to get URL parameters
+    function getUrlParams() {
+      var params = {};
+      var queryString = window.location.search;
+      var urlParams = new URLSearchParams(queryString);
+
+      for (const [key, value] of urlParams) {
+        params[key] = value;
+      }
+
+      return params;
+    }
+
+    // Get URL parameters
+    var params = getUrlParams();
+
+    // Display submitted data
+    document.getElementById('banner-title').innerText = params.storyTitle || 'N/A';
+    document.getElementById('content-text').innerText = params.content || 'N/A';
+    document.getElementById('summary').innerText = params.summary || 'N/A';
+    document.getElementById('author').innerText = params.author || 'N/A';
+  </script>
+</body>
+
+</html>
