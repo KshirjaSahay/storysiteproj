@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
         integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
     <style>
         /* CSS styles */
         body {
@@ -18,55 +19,12 @@
             font-family: Arial, sans-serif;
         }
 
-        /* header styles */
-        header {
-            position: relative;
-            background-color: #008080;
-            /* Previous background color of TaleSpinner */
-            padding: 20px;
-            text-align: center;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .navbar-brand {
-            text-decoration: none;
-            color: #fff;
-            font-size: 24px; /* Increased font size */
-            font-weight: bold; /* Added font weight for visibility */
-            background-color: #4caf50; /* Background color for better visibility */
-            padding: 10px 20px; /* Adjust padding as needed */
-            border-radius: 5px;
-        }
-
-        .navbar-nav {
-            margin-top: 10px; /* Adjust margin-top as needed */
-        }
-
-        .navbar-nav a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 18px;
-            padding: 10px 20px;
-            border-radius: 5px;
-            margin: 0 5px;
-            transition: background-color 0.3s;
-        }
-
-        .navbar-nav a:hover {
-            background-color: #45a049;
-        }
-
         /* Form styles */
         #form {
             margin-top: 50px;
             width: 90%;
             max-width: 500px;
-            background-color: #f9f9f9;
+            background-color: #ebddcd;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -92,7 +50,7 @@
         .form-group textarea {
             width: 100%;
             padding: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid #cf9494;
             border-radius: 4px;
         }
 
@@ -100,7 +58,7 @@
             display: block;
             width: 100%;
             padding: 10px;
-            background-color: #4caf50;
+            background-color: #af7c4c;
             color: #fff;
             border: none;
             border-radius: 4px;
@@ -109,7 +67,7 @@
         }
 
         button[type="submit"]:hover {
-            background-color: #45a049;
+            background-color: #6b3c10;
         }
     </style>
 </head>
@@ -118,17 +76,27 @@
 
     <!-- header -->
     <header>
-        <h1 style="color: #fff;">Bring your stories to life</h1>
-        <nav class="navbar">
-            <div class="container">
-                <a href="index.html" class="navbar-brand">TaleSpinner</a>
-                <div class="navbar-nav">
-                    <a href="">home</a>
-                    <a href="#story">stories</a>
-                    <a href="#about">about</a>
-                </div>
+        <nav class = "navbar">
+            <div class = "container">
+              <a href = "index.html" class = "navbar-brand">TaleSpinner</a>
+              <div class = "navbar-nav">
+                <a href = "">home</a>
+                <a href = "#story">stories</a>
+                <a href = "#about">about</a>
+                <a href = "post.html">Write-Your-Story</a>
+              </div>
             </div>
-        </nav>
+          </nav>
+          <div class = "banner">
+            <div class = "container">
+              <h1 class = "banner-title">
+                <span>Tale</span>Spinner
+              </h1>
+              <p>Spin your story, share your world, let it take flight</p>
+            </div>
+          </div>
+        </header>
+        <!-- end of header -->
 
         <!-- Form -->
         <section id="form">
@@ -158,8 +126,6 @@
         </section>
         <!-- End of Form -->
 
-    </header>
-    <!-- end of header -->
 
     <!-- Rest of your HTML code goes here -->
 
