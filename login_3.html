@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- FINAL LOGIN PAGE SO FAR -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="text-center mb-4">Login</h2>
+        <form id="loginForm" onsubmit="return goToHome()">
+            <div class="form-group">
+                <input type="text" class="form-control" id="userID" placeholder="User ID" required>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn">Login</button>
+        </form>
+        <div class="text-center mt-3 signup-link">
+            New to KinKeeper? Click <a href="signup_3.html">here</a> to sign up.
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            var userID = document.getElementById('userID').value.trim();
+            var password = document.getElementById('password').value.trim();
+
+            if (userID === '' || password === '') {
+                alert('User ID and Password are required');
+                return false;
+            }
+            return true;
+        }
+
+        function goToHome() {
+        var login = validateForm();
+        if (login) {
+            alert('Login Successful');
+            console.log('Redirecting to index.html...');
+            setTimeout(function() {
+                window.location= "index.html";
+            }, 1000); 
+        }
+        return false; // Prevent form submission
+    }
+    </script>
+</body>
+
+</html>
